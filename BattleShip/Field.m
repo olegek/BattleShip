@@ -9,16 +9,26 @@
 #import "Field.h"
 
 @implementation Field
-@synthesize row;
+@synthesize row,rowBS;
+
+-(void)setRow:(NSMutableArray *)row{
+    rowBS = row;
+}
 
 -(void) generateField{
     
     row   = [[NSMutableArray alloc] initWithCapacity:10];
     NSMutableArray * board = [[NSMutableArray alloc] initWithCapacity:10];
  
+    NSLog(@"%@",rowBS);
+    
+    
     for (int i = 0; i < 10; i++) {
+        if([row containsObject:@"+"]==0){
                 [row addObject:@"-"];
+        }
     }
+    
     
     [board addObject:row];
     

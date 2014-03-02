@@ -10,7 +10,8 @@
 
 @interface Field : NSObject
 
-@property (nonatomic,strong)NSMutableArray * row;
+@property (nonatomic,strong) NSMutableArray * row;
+@property (nonatomic,strong) NSMutableArray * rowBS;
 
 -(void) generateField;
 -(void) setRow:(NSMutableArray *)row;

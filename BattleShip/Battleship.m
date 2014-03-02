@@ -11,16 +11,16 @@
 @implementation Battleship
 -(void)addShip{
  
-    NSMutableArray * row = [[NSMutableArray alloc]init];
+    NSMutableArray * rowBS = [[NSMutableArray alloc]init];
     
     int lenght = 4;
     
     for (int x = 0; x<0+lenght; x++) {
-        [row addObject:@"+"];
+        [rowBS addObject:@"+"];
     }
 
     Field * f = [[Field alloc]init];
-    [f setRow:row];
+    [f setRow:rowBS];
 
 }
 
