@@ -13,26 +13,16 @@
 // submarine - однопалубний
 
 #import <Foundation/Foundation.h>
-#import "Field.h"
-#import "Battleship.h"
-#import "Cruiser.h"
-#import "Destroyer.h"
-#import "Submarine.h"
+#include "Field.h"
+
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
         
-        Battleship * b = [[Battleship alloc]init];
-        [b addShip];
-      
-        Field * field = [[Field alloc]init];
-        [field generateField];
-        
-
-
-        
+        Field * f = [[Field alloc]init];
+        [f generateField];
     }
     return 0;
 }

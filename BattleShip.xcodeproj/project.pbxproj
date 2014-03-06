@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC08FDE718C4A2F800AE06F4 /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = AC08FDE618C4A2F800AE06F4 /* Ship.m */; };
 		AC4501E718BDFF930010E3E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4501E618BDFF930010E3E4 /* Foundation.framework */; };
 		AC4501EA18BDFF930010E3E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4501E918BDFF930010E3E4 /* main.m */; };
 		AC4501EE18BDFF930010E3E4 /* BattleShip.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC4501ED18BDFF930010E3E4 /* BattleShip.1 */; };
@@ -31,6 +32,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC08FDE518C4A2F800AE06F4 /* Ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
+		AC08FDE618C4A2F800AE06F4 /* Ship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ship.m; sourceTree = "<group>"; };
 		AC4501E318BDFF930010E3E4 /* BattleShip */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BattleShip; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC4501E618BDFF930010E3E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AC4501E918BDFF930010E3E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 				AC4501E918BDFF930010E3E4 /* main.m */,
 				AC4501F418BDFFB30010E3E4 /* Field.h */,
 				AC4501F518BDFFB30010E3E4 /* Field.m */,
+				AC08FDE518C4A2F800AE06F4 /* Ship.h */,
+				AC08FDE618C4A2F800AE06F4 /* Ship.m */,
 				AC45020018BE08010010E3E4 /* Battleship.h */,
 				AC45020118BE08010010E3E4 /* Battleship.m */,
 				AC4501FD18BE07E70010E3E4 /* Cruiser.h */,
@@ -169,6 +174,7 @@
 				AC4501F618BDFFB30010E3E4 /* Field.m in Sources */,
 				AC4501EA18BDFF930010E3E4 /* main.m in Sources */,
 				AC4501F918BE07B70010E3E4 /* Submarine.m in Sources */,
+				AC08FDE718C4A2F800AE06F4 /* Ship.m in Sources */,
 				AC4501FC18BE07D10010E3E4 /* Destroyer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +287,7 @@
 				AC4501F318BDFF930010E3E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

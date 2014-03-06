@@ -9,19 +9,45 @@
 #import "Battleship.h"
 
 @implementation Battleship
--(void)addShip{
- 
-    NSMutableArray * rowBS = [[NSMutableArray alloc]init];
+@synthesize row;
+
+-(void)addBattleShip {
     
-    int lenght = 4;
+    row = [[NSMutableArray alloc]initWithCapacity:10];
     
-    for (int x = 0; x<0+lenght; x++) {
-        [rowBS addObject:@"+"];
+    lenght = 4;
+    
+    randomAxis = [self generateRandomNumberBetweenMin:0 Max:1];
+    randomPoint = [self generateRandomNumberBetweenMin:0 Max:9];
+    
+  //  [self check4Range];
+    
+    if(randomAxis == 0){
+        for ( x = 0; x<10; x++) {
+            if(x == randomPoint){
+                
+                [self check4Touch];
+                
+                for (int i = randomPoint; i<randomPoint+lenght; i++) {
+                    [row addObject:@"+"];
+                }
+            }
+            else [row addObject:@"-"];
+        }
     }
+    if(randomAxis ==1){
+        for ( y = 0; y<10; y++) {
 
-    Field * f = [[Field alloc]init];
-    [f setRow:rowBS];
-
+    //        [self check4Touch];
+            
+            if(y == randomPoint ){
+                
+                for (int q = y; q> y+lenght; q++) {
+                    [row addObject:@"+"];
+                }
+            }
+            else [row addObject:@"-"];
+        }
+    }
 }
-
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Ship.h"
 
-@interface Cruiser : NSObject
+@interface Cruiser : Ship
+
+-(void)addCruiser;
 
 @end

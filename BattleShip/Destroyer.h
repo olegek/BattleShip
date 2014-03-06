@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Ship.h"
 
-@interface Destroyer : NSObject
+@interface Destroyer : Ship
+
+-(void)addDestroyer;
 
 @end

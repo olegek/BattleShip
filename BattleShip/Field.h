@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Battleship.h"
+#import "Cruiser.h"
+#import "Destroyer.h"
+#import "Submarine.h"
 
 @interface Field : NSObject
 
-@property (nonatomic,strong) NSMutableArray * row;
-@property (nonatomic,strong) NSMutableArray * rowBS;
-
 -(void) generateField;
--(void) setRow:(NSMutableArray *)row;
+-(void) addShip;
+
 @end

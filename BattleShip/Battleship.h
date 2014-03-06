@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Field.h"
+#import "Ship.h"
 
-@interface Battleship : NSObject
+@interface Battleship : Ship
 
--(void) addShip;
+-(void)addBattleShip;
+
 @end

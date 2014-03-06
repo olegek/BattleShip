@@ -9,32 +9,23 @@
 #import "Field.h"
 
 @implementation Field
-@synthesize row,rowBS;
-
--(void)setRow:(NSMutableArray *)row{
-    rowBS = row;
-}
 
 -(void) generateField{
     
-    row   = [[NSMutableArray alloc] initWithCapacity:10];
+    NSMutableArray * row   = [[NSMutableArray alloc] initWithCapacity:10];
     NSMutableArray * board = [[NSMutableArray alloc] initWithCapacity:10];
- 
-    NSLog(@"%@",rowBS);
     
-    
-    for (int i = 0; i < 10; i++) {
-        if([row containsObject:@"+"]==0){
-                [row addObject:@"-"];
-        }
-    }
-    
+  /*  for (int i = 0; i < 10; i++) {
+        [row addObject:@"_"];
+    }*/
+    [self addShip];
     
     [board addObject:row];
     
     NSMutableArray *preFilledRow = nil;
     
     for (int k = 0; k < 9; k++) {
+        
         preFilledRow = [row mutableCopy];
         [board addObject:preFilledRow];
         preFilledRow = nil;
@@ -43,6 +34,40 @@
     
     for (NSMutableArray *boardRow in board)
         NSLog(@"%@", [boardRow componentsJoinedByString:@" "]);
-     
 }
+-(void)addShip{
+    
+    int count = 1;
+    
+    if(count ==1){
+        Battleship * b = [[Battleship alloc]init];
+        [b addBattleShip];
+        count ++;
+    }
+    
+    if(count==2){
+        Cruiser * c = [[Cruiser alloc]init];
+        
+        for(int i = 0 ; i<2 ;i++){
+            [c addCruiser];
+        }
+        count ++;
+    }
+    
+    if(count==3){
+        Destroyer * d = [[Destroyer alloc]init];
+        for(int i =0;i<3;i++){
+            [d addDestroyer];
+        }
+        count ++;
+    }
+    
+    if(count == 4){
+        Submarine *s = [[Submarine alloc]init];
+        for (int i = 0; i<4; i++) {
+            [s addSubmarine];
+        }
+    }
+}
+
 @end
